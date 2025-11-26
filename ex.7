@@ -1,0 +1,37 @@
+
+
+
+#include <iostream>
+using namespace std;
+
+class Distance {
+public:
+    int feet, inch;
+
+    // Constructor
+    Distance(int f, int i) {
+        feet = f;
+        inch = i;
+    }
+
+    // Operator overloading for decrement (-)
+    void operator-() {
+        feet--;
+        inch--;
+        cout << "\nFeet & Inches (After Decrement): "
+             << feet << " feet " << inch << " inches" << endl;
+    }
+};
+
+int main() {
+    cout << "Name:Divya Appaso Bagal\n";
+    cout << "Roll No: 101\n";
+    cout << "Division: S.Y.B CSE\n";
+
+    Distance d1(8, 9); // Create object
+    cout << "Initial Distance: " << d1.feet << " feet " << d1.inch << " inches" << endl;
+
+    -d1; // Call overloaded operator
+
+    return 0;
+}
